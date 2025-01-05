@@ -1,0 +1,56 @@
+1. Components of the System
+Input Data:
+
+    Camera Feed: Captures real-time video or images of the driver’s face.
+    Sensors (Optional): EEG, heart rate, or steering pattern sensors for additional physiological data.
+
+Features Monitored:
+
+    Eye Features:
+        Blink rate and duration.
+        Percentage of Eye Closure (PERCLOS) over time.
+    Facial Features:
+        Head pose and orientation.
+        Yawning frequency.
+    Behavioral Patterns:
+        Frequent nodding or drooping head.
+        Sudden steering changes.
+
+2. Workflow
+
+    Preprocessing:
+        Image enhancement (grayscale conversion, noise reduction).
+        Face detection using algorithms like Haar cascades or DNNs (Deep Neural Networks).
+
+    Feature Extraction:
+        Eye and mouth region detection using landmarks (e.g., dlib or OpenCV).
+        Calculate PERCLOS and detect yawning.
+
+    Classification:
+        Use machine learning models (e.g., SVM, CNNs) to classify drowsy vs. alert states.
+
+    Alert Mechanism:
+        Audio alert (buzzer or spoken message).
+        Visual alert on the dashboard.
+        Vehicle control systems (e.g., slowing down or stopping the vehicle).
+
+3. Outputs
+
+    Real-Time Alerts:
+        Audio: "Drowsiness detected, please take a break."
+        Visual: Warning sign (e.g., red flashing icon).
+
+    Metrics Display:
+        Eye closure percentage.
+        Drowsiness level (low, moderate, critical).
+
+    Data Logging:
+        Timestamped records of detected drowsy events.
+        Driver behavior analytics over time.
+
+4. Images for System Visualization
+
+    Image 1: Real-time video frame with detected facial landmarks (e.g., bounding boxes around eyes and mouth).
+    Image 2: Graph or chart showing PERCLOS values over time.
+    Image 3: Dashboard alert interface with warnings.
+    Image 4: Heatmap of attention across the face.
